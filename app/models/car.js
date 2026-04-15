@@ -2,7 +2,7 @@ import { DataTypes } from 'sequelize'
 import sequelize from '../database/database.js'
 
 const Car = sequelize.define('cars', {
-    brand: { type: DataTypes.STRING,  allowNull: false, validate: { len: [3, 50] }  }, //len: minimum 1 maximum 50 karakter
+    brand: { type: DataTypes.STRING,  allowNull: false, validate: { len: [1, 50] }  }, //len: minimum 1 maximum 50 karakter
     model: { type: DataTypes.STRING,  allowNull: false, validate: { len: [1, 50] }  },
     licensePlate: { type: DataTypes.STRING,  allowNull: false, validate: {
         minHossz(value) {
